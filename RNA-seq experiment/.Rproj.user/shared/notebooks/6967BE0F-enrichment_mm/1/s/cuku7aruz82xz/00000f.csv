@@ -1,0 +1,69 @@
+"0","resultFisher <- runTest(GOdata, algorithm = ""elim"", statistic = ""fisher"")"
+"2","
+			 -- Elim Algorithm -- 
+
+		 the algorithm is scoring 12899 nontrivial nodes
+		 parameters: 
+			 test statistic: fisher
+			 cutOff: 0.01
+"
+"2","
+	 Level 19:	2 nodes to be scored	(0 eliminated genes)
+"
+"2","
+	 Level 18:	19 nodes to be scored	(16 eliminated genes)
+"
+"2","
+	 Level 17:	45 nodes to be scored	(53 eliminated genes)
+"
+"2","
+	 Level 16:	76 nodes to be scored	(53 eliminated genes)
+"
+"2","
+	 Level 15:	106 nodes to be scored	(318 eliminated genes)
+"
+"2","
+	 Level 14:	195 nodes to be scored	(468 eliminated genes)
+"
+"2","
+	 Level 13:	414 nodes to be scored	(794 eliminated genes)
+"
+"2","
+	 Level 12:	808 nodes to be scored	(1633 eliminated genes)
+"
+"2","
+	 Level 11:	1320 nodes to be scored	(2821 eliminated genes)
+"
+"2","
+	 Level 10:	1696 nodes to be scored	(5160 eliminated genes)
+"
+"2","
+	 Level 9:	1937 nodes to be scored	(7913 eliminated genes)
+"
+"2","
+	 Level 8:	1903 nodes to be scored	(9852 eliminated genes)
+"
+"2","
+	 Level 7:	1662 nodes to be scored	(11794 eliminated genes)
+"
+"2","
+	 Level 6:	1351 nodes to be scored	(13514 eliminated genes)
+"
+"2","
+	 Level 5:	807 nodes to be scored	(14182 eliminated genes)
+"
+"2","
+	 Level 4:	403 nodes to be scored	(14881 eliminated genes)
+"
+"2","
+	 Level 3:	136 nodes to be scored	(15595 eliminated genes)
+"
+"2","
+	 Level 2:	18 nodes to be scored	(16155 eliminated genes)
+"
+"2","
+	 Level 1:	1 nodes to be scored	(16156 eliminated genes)
+"
+"0","tab <- GenTable(GOdata, raw.p.value = resultFisher, topNodes = length(resultFisher@score),"
+"0","				numChar = 120)"
+"0","head(tab)"

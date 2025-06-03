@@ -1,0 +1,8 @@
+"0","anno <- read.delim(""ensembl_mm_114.txt"",as.is=T)"
+"0","dim(anno)"
+"1","[1]"
+"1"," 278369"
+"1","     13"
+"1","
+"
+"0","head(anno)"

@@ -1,0 +1,68 @@
+"0","# Kolmogorov-Smirnov testing"
+"0","resultKS <- runTest(GOdata, algorithm = ""weight01"", statistic = ""ks"")"
+"2","
+			 -- Weight01 Algorithm -- 
+
+		 the algorithm is scoring 15648 nontrivial nodes
+		 parameters: 
+			 test statistic: ks
+			 score order: increasing
+"
+"2","
+	 Level 19:	2 nodes to be scored	(0 eliminated genes)
+"
+"2","
+	 Level 18:	28 nodes to be scored	(0 eliminated genes)
+"
+"2","
+	 Level 17:	60 nodes to be scored	(39 eliminated genes)
+"
+"2","
+	 Level 16:	98 nodes to be scored	(121 eliminated genes)
+"
+"2","
+	 Level 15:	146 nodes to be scored	(251 eliminated genes)
+"
+"2","
+	 Level 14:	260 nodes to be scored	(624 eliminated genes)
+"
+"2","
+	 Level 13:	574 nodes to be scored	(1095 eliminated genes)
+"
+"2","
+	 Level 12:	1069 nodes to be scored	(2073 eliminated genes)
+"
+"2","
+	 Level 11:	1694 nodes to be scored	(3572 eliminated genes)
+"
+"2","
+	 Level 10:	2078 nodes to be scored	(5764 eliminated genes)
+"
+"2","
+	 Level 9:	2361 nodes to be scored	(8793 eliminated genes)
+"
+"2","
+	 Level 8:	2238 nodes to be scored	(11579 eliminated genes)
+"
+"2","
+	 Level 7:	1966 nodes to be scored	(13845 eliminated genes)
+"
+"2","
+	 Level 6:	1547 nodes to be scored	(15674 eliminated genes)
+"
+"2","
+	 Level 5:	915 nodes to be scored	(17453 eliminated genes)
+"
+"2","
+	 Level 4:	448 nodes to be scored	(18108 eliminated genes)
+"
+"2","
+	 Level 3:	145 nodes to be scored	(18457 eliminated genes)
+"
+"2","
+	 Level 2:	18 nodes to be scored	(18654 eliminated genes)
+"
+"2","
+	 Level 1:	1 nodes to be scored	(18844 eliminated genes)
+"
+"0","tab <- GenTable(GOdata, raw.p.value = resultKS, topNodes = length(resultKS@score), numChar = 120)"

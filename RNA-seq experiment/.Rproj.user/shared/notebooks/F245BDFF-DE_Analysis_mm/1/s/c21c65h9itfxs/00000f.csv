@@ -1,0 +1,13 @@
+"0","mm <- model.matrix(~0 + group + mouse)"
+"0","tmp <- voom(d, mm, plot = T)"
+"1","Coefficients not estimable:"
+"1"," "
+"1","mouse206 mouse7531"
+"1"," "
+"1","
+"
+"2","Warning: Partial NA coefficients for 11730 probe(s)"
+"2","Warning: type = ""cairo"" is unavailable. trying ""Xlib"""
+"2","Error in dev.control(displaylist = ""enable"") : 
+  dev.control() called without an open graphics device
+"

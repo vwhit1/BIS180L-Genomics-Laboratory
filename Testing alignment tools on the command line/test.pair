@@ -1,0 +1,102 @@
+########################################
+# Program: water
+# Rundate: Tue 22 Apr 2025 13:47:29
+# Commandline: water
+#    -asequence NP_414543.1.fa
+#    -bsequence NP_418375.1.fa
+#    -gapopen 10
+#    -gapextend 1
+#    -outfile test.pair
+# Align_format: srspair
+# Report_file: test.pair
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: NP_414543.1
+# 2: NP_418375.1
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 1.0
+#
+# Length: 822
+# Identity:     248/822 (30.2%)
+# Similarity:   414/822 (50.4%)
+# Gaps:          46/822 ( 5.6%)
+# Score: 915.0
+# 
+#
+#=======================================
+
+NP_414543.1        5 KFGGTSVANAERFLRVADILESNARQGQVATVLSAPAKITNHLVAMIEKT     54
+                     ||||:|:|:.:.:||||.|:...::...: .|:||....||.|:..::.:
+NP_418375.1       18 KFGGSSLADVKCYLRVAGIMAEYSQPDDM-MVVSAAGSTTNQLINWLKLS     66
+
+NP_414543.1       55 ISGQDALPNISDAERIF-AELLTGLAAAQPGFPLAQLKTFVDQEFAQIKH    103
+                     .:.:.:...:....|.: .:|::||..|:....|  :..|| .:..::..
+NP_418375.1       67 QTDRLSAHQVQQTLRRYQCDLISGLLPAEEADSL--ISAFV-SDLERLAA    113
+
+NP_414543.1      104 VL-HGISLLGQCPDSINAALICRGEKMSIAIMAGVLEARGHNVTVIDPVE    152
+                     :| .||:      |::.|.::..||..|..:|:.||..:|.....:| ..
+NP_418375.1      114 LLDSGIN------DAVYAEVVGHGEVWSARLMSAVLNQQGLPAAWLD-AR    156
+
+NP_414543.1      153 KLLAVGHYLESTVDIAESTRRIAASRIPADH---MVLMAGFTAGNEKGEL    199
+                     :.|......:..||  |........::...|   .:::.||.:.|..||.
+NP_418375.1      157 EFLRAERAAQPQVD--EGLSYPLLQQLLVQHPGKRLVVTGFISRNNAGET    204
+
+NP_414543.1      200 VVLGRNGSDYSAAVLAACLRADCCEIWTDVDGVYTCDPRQVPDARLLKSM    249
+                     |:||||||||||..:.|........||:||.|||:.|||:|.||.||..:
+NP_418375.1      205 VLLGRNGSDYSATQIGALAGVSRVTIWSDVAGVYSADPRKVKDACLLPLL    254
+
+NP_414543.1      250 SYQEAMELSYFGAKVLHPRTITPIAQFQIPCLIKNTGNPQAPGTLIGASR    299
+                     ...||.||:...|.|||.||:.|::..:|...::.:..|..     |::|
+NP_418375.1      255 RLDEASELARLAAPVLHARTLQPVSGSEIDLQLRCSYTPDQ-----GSTR    299
+
+NP_414543.1      300 DEDELP----VKGISNLNNMAMFSVSGPGMKGMVGMAARVFAAMSRARIS    345
+                     .|..|.    .:.:::.:::.:.....|..:........:...:.||::.
+NP_418375.1      300 IERVLASGTGARIVTSHDDVCLIEFQVPASQDFKLAHKEIDQILKRAQVR    349
+
+NP_414543.1      346 VVLITQSSSEYSISFCVPQSDCVRAERAMQEEFYLELKEGLLEPLAVTER    395
+                     .:.:...:....:.||........|.:.:.|       .||...|.:.:.
+NP_418375.1      350 PLAVGVHNDRQLLQFCYTSEVADSALKILDE-------AGLPGELRLRQG    392
+
+NP_414543.1      396 LAIISVVGDGMRTLRGISAKFFAALARANINIVAIAQGSSERSISVVVNN    445
+                     ||::::||.|:........:|:..|....:...  .|.....|:..|:..
+NP_418375.1      393 LALVAMVGAGVTRNPLHCHRFWQQLKGQPVEFT--WQSDDGISLVAVLRT    440
+
+NP_414543.1      446 DDATTGVRVTHQMLFNTDQVIEVFVIGVGGVGGALLEQLKRQQSWLKNK-    494
+                     ....:.::..||.:|..::.|.:.:.|.|.:|...||...|:||.|..: 
+NP_418375.1      441 GPTESLIQGLHQSVFRAEKRIGLVLFGKGNIGSRWLELFAREQSTLSART    490
+
+NP_414543.1      495 HIDLRVCGVANSKALLTNVHGLN----LENWQEELAQAKEPFNLGRLIRL    540
+                     ..:..:.||.:|:..|.:..||:    |..:.:|..:..|.    .|...
+NP_418375.1      491 GFEFVLAGVVDSRRSLLSYDGLDASRALAFFNDEAVEQDEE----SLFLW    536
+
+NP_414543.1      541 VKEYHLLNPVIVDCTSSQAVADQYADFLREGFHVVTPNKKANTSSMDYYH    590
+                     ::.:...:.|::|.|:||.:||||.||...||||::.||.|..|..:.|.
+NP_418375.1      537 MRAHPYDDLVVLDVTASQQLADQYLDFASHGFHVISANKLAGASDSNKYR    586
+
+NP_414543.1      591 QLRYAAEKSRRKFLYDTNVGAGLPVIENLQNLLNAGDELMKFSGILSGSL    640
+                     |:..|.||:.|.:||:..||||||:...:::|:::||.::..|||.||:|
+NP_418375.1      587 QIHDAFEKTGRHWLYNATVGAGLPINHTVRDLIDSGDTILSISGIFSGTL    636
+
+NP_414543.1      641 SYIFGKLDEGMSFSEATTLAREMGYTEPDPRDDLSGMDVARKLLILARET    690
+                     |::|.:.|..:.|:|....|.:.|.|||||||||||.||.|||:|||||.
+NP_418375.1      637 SWLFLQFDGSVPFTELVDQAWQQGLTEPDPRDDLSGKDVMRKLVILAREA    686
+
+NP_414543.1      691 GRELELADIEIEPVLPAEFNAEGDVAAFMANLSQLDDLFAARVAKARDEG    740
+                     |..:|...:.:|.::||.... |.:..|..|..:|::....|:..||:.|
+NP_418375.1      687 GYNIEPDQVRVESLVPAHCEG-GSIDHFFENGDELNEQMVQRLEAAREMG    735
+
+NP_414543.1      741 KVLRYVGNIDEDGVCRVKIAEVDGNDPLFKVKNGENALAFYSHYYQPLPL    790
+                     .|||||...|.:|..||.:..|..:.||..:...:|..|..|.:|:..||
+NP_418375.1      736 LVLRYVARFDANGKARVGVEAVREDHPLASLLPCDNVFAIESRWYRDNPL    785
+
+NP_414543.1      791 VLRGYGAGNDVTAAGVFADLLR    812
+                     |:||.|||.||||..:.:|:.|
+NP_418375.1      786 VIRGPGAGRDVTAGAIQSDINR    807
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,82 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+shuff_data <- read.table(file="shuff_score.txt")
+```
+
+```{r}
+shuff_mean = mean(shuff_data[,1])
+shuff_sd = sd(shuff_data[,1])
+z_score_915 = (915 - shuff_mean)/shuff_sd
+pnorm_915 = pnorm(915, mean = shuff_mean, sd = shuff_sd, lower.tail = FALSE)
+```
+
+  Yes, a Z-score of ~140.5 is highly significant in a normal distribution.
+  1.96 is the typical 5% upper cutoff for a normal distribution, consisting of the upper 2.5%.
+  This is not particularly useful since this is not a normal distribution but a right skewed one. Sill, our z-score is so significantly far right that it seems to indicate a lack of randomness.
+    Yes, I believe we should correct this for another hypothesis. Specifically, we should do a one tailed test, for which we can vary our P-value to see our level of confidence.
+      When using a right tail test, our P value here is basically 0, and appears as 0 in the code due to rounding. This means that at a 0.000001 or so significance level (very high confidence) we reject the null hypothesis, and it suggests that this value is not random.
+      For instance, if we wanted to be 95% certian that our results were random, we would expect a p-value that is less than or equal to .05. The p-value we see here blows this out of the water, as it is essencially 0.
+      I would likely use a 99.99% certainty threshold (0.0001) for biological alignment, simply because the resources that go into research are best spent in situations where we are very certian.
+      
+```{r}
+NP_414543.1.align <- read.table(file="NP_414543.1_align.txt")
+```    
+
+```{r}
+boxplot(NP_414543.1.align[,1], horizontal=TRUE)
+boxplot(shuff_data[,1], horizontal=TRUE)
+```
+
+```{r}
+x1= subset(NP_414543.1.align, NP_414543.1.align[,1] < 250)
+x2= x1[,1]
+hist(x2, breaks=seq(range(x2)[1]-1, range(x2)[2]+1, by=0.5))
+```
+
+```{r}
+x=shuff_data[,1]
+hist(x, breaks=seq(range(x)[1]-1, range(x)[2]+1, by=0.5))
+```
+
+```{r}
+mycolors = rainbow(2)
+ggplot(NP_414543.1.align, aes(V1)) +
+  geom_density()
+ggplot(x1, aes(V1)) +
+  geom_density()
+ggplot(shuff_data, aes(V1)) +
+  geom_density()
+```
+
+```{r}
+NP_414543.1.align = NP_414543.1.align %>% 
+  mutate(new_col = "exp")
+shuff_data = shuff_data %>% 
+  mutate(new_col = "shuff")
+my_full_data = rbind(shuff_data, NP_414543.1.align, by="V1")
+my_full_data = my_full_data %>% 
+  filter(V1 != "V1") %>% 
+  mutate(V1 = as.numeric(V1))
+```
+
+```{r}
+boxplot(my_full_data$V1, horizontal=TRUE)
+```
+
+```{r}
+p2 <- ggplot(data=my_full_data, aes(x=log10(my_full_data$V1), group=new_col, fill=new_col)) +
+    geom_boxplot(adjust=1.5, alpha=.4)
+p2
+p1 <- ggplot(data=my_full_data, aes(x=log10(my_full_data$V1), group=new_col, fill=new_col)) +
+    geom_density(adjust=1.5, alpha=.4)
+p1
+```
+
+```{r}
+
+```
+

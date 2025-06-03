@@ -1,0 +1,6 @@
+"0","ENSMUSG00000056054 <- y$E[""ENSMUSG00000056054.10"",]"
+"0","plot(ENSMUSG00000056054 ~ pH, ylim = c(0, 3.5))"
+"2","Warning: type = ""cairo"" is unavailable. trying ""Xlib"""
+"2","Error in dev.control(displaylist = ""enable"") : 
+  dev.control() called without an open graphics device
+"

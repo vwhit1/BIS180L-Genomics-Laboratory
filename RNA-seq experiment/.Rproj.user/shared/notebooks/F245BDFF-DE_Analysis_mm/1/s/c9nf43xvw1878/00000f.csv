@@ -1,0 +1,4 @@
+"0","genotype <- factor(metadata$genotype, levels = c(""WT"", ""KOMIR150"", ""KOTet3""))"
+"0","cell_type <- factor(metadata$cell_type, levels = c(""C"", ""NC""))"
+"0","mouse <- factor(metadata$mouse, levels = c(""110"", ""148"", ""158"", ""183"", ""198"", ""206"", ""2670"", ""7530"", ""7531"", ""7532"", ""H510"", ""H514""))"
+"0","mm <- model.matrix(~genotype*cell_type + mouse)"

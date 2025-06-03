@@ -1,0 +1,19 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+star <- read_tsv("/quobyte/ikorfgrp/bis180l/vwhit/rnaseq_example/summary_star_alignments.txt")
+```
+
+```{r}
+counts <- read_tsv("/quobyte/ikorfgrp/bis180l/vwhit/rnaseq_example/03-Counts/rnaseq_workshop_counts.txt")
+```
+

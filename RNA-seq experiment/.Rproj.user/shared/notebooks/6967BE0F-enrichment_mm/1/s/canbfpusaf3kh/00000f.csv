@@ -1,0 +1,21 @@
+"0","# Create topGOData object"
+"0","GOdata <- new(""topGOdata"","
+"0","	ontology = ""BP"","
+"0","	allGenes = geneList,"
+"0","	geneSelectionFun = function(x) (x < 0.05),"
+"0","	annot = annFUN.org , mapping = ""org.Mm.eg.db"")"
+"2","
+Building most specific GOs .....
+"
+"2","	( 12679 GO terms found. )
+"
+"2","
+Build GO DAG topology ..........
+"
+"2","	( 15648 GO terms and 34862 relations. )
+"
+"2","
+Annotating nodes ...............
+"
+"2","	( 23079 genes annotated to the GO terms. )
+"

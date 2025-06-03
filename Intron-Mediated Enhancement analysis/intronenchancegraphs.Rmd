@@ -1,0 +1,230 @@
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r}
+k1_data <- read.csv(file="imeter_csv/imeteroutk1.csv", header = F)
+names(k1_data) <- c("Score", "Expression")
+k2_data <- read.csv(file="imeter_csv/imeteroutk2.csv", header = F)
+names(k2_data) <- c("Score", "Expression")
+k3_data <- read.csv(file="imeter_csv/imeteroutk3.csv", header = F)
+names(k3_data) <- c("Score", "Expression")
+k4_data <- read.csv(file="imeter_csv/imeteroutk4.csv", header = F)
+names(k4_data) <- c("Score", "Expression")
+k5_data <- read.csv(file="imeter_csv/imeteroutk5.csv", header = F)
+names(k5_data) <- c("Score", "Expression")
+k6_data <- read.csv(file="imeter_csv/imeteroutk6.csv", header = F)
+names(k6_data) <- c("Score", "Expression")
+k7_data <- read.csv(file="imeter_csv/imeteroutk7.csv", header = F)
+names(k7_data) <- c("Score", "Expression")
+k8_data <- read.csv(file="imeter_csv/imeteroutk8.csv", header = F)
+names(k8_data) <- c("Score", "Expression")
+k9_data <- read.csv(file="imeter_csv/imeteroutk9.csv", header = F)
+names(k9_data) <- c("Score", "Expression")
+k10_data <- read.csv(file="imeter_csv/imeteroutk10.csv", header = F)
+names(k10_data) <- c("Score", "Expression")
+k11_data <- read.csv(file="imeter_csv/imeteroutk11.csv", header = F)
+names(k11_data) <- c("Score", "Expression")
+```
+
+```{r}
+# y = x*0.08034 + 3.47645
+k5_data %>% 
+  ggplot(aes(x=Score, y=Expression))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)+
+  labs(
+    x = "Score", 
+    y = "Expression", 
+    title = "Expression vs Score for 5-kmers",
+  )+ theme(plot.title = element_text(size=22), axis.title = element_text(size=20), axis.text = element_text(size=15))+
+  coord_fixed(ratio = 8)
+  #theme_light(plot.title = element_text(size=30))
+```
+
+```{r}
+cor(x=k1_data$Score, y=k1_data$Expression)
+cor(x=k2_data$Score, y=k2_data$Expression)
+cor(x=k3_data$Score, y=k3_data$Expression)
+cor(x=k4_data$Score, y=k4_data$Expression)
+cor(x=k5_data$Score, y=k5_data$Expression)
+cor(x=k6_data$Score, y=k6_data$Expression)
+cor(x=k7_data$Score, y=k7_data$Expression)
+cor(x=k8_data$Score, y=k8_data$Expression)
+cor(x=k9_data$Score, y=k9_data$Expression)
+cor(x=k10_data$Score, y=k10_data$Expression)
+cor(x=k11_data$Score, y=k11_data$Expression)
+```
+
+```{r}
+colors = rainbow(11)
+```
+
+```{r}
+k1_data = k1_data %>% 
+  mutate(new_col = "k1")
+k2_data = k2_data %>% 
+  mutate(new_col = "k2")
+k3_data = k3_data %>% 
+  mutate(new_col = "k3")
+k4_data = k4_data %>% 
+  mutate(new_col = "k4")
+k5_data = k5_data %>% 
+  mutate(new_col = "k5")
+k6_data = k6_data %>% 
+  mutate(new_col = "k6")
+k7_data = k7_data %>% 
+  mutate(new_col = "k7")
+k8_data = k8_data %>% 
+  mutate(new_col = "k8")
+k9_data = k9_data %>% 
+  mutate(new_col = "k9")
+k10_data = k10_data %>% 
+  mutate(new_col = "k10")
+k11_data = k11_data %>% 
+  mutate(new_col = "k11")
+
+```
+
+```{r}
+my_full_data = rbind(k1_data, k2_data, k3_data, k4_data, k5_data, k6_data, k7_data, k8_data, k9_data, k10_data, k11_data, by="Expression")
+```
+
+```{r}
+my_full_data %>% 
+  filter(Score != "Expression") %>% 
+  mutate(Expression = as.numeric(Expression)) %>% 
+  mutate(Score = as.numeric(Score)) %>% 
+  ggplot(aes(Score, Expression, group = new_col, color = new_col))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)+
+  labs(
+    x = "Score", 
+    y = "Expression", 
+    title = "Expression vs Score for k-mers 1 through 11", color = "k-mer length"
+  )+
+  theme_light()
+  
+```
+
+```{r}
+cor( x = k1_data$Score, y = k1_data$Expression)
+cor( x = k2_data$Score, y = k2_data$Expression)
+cor( x = k3_data$Score, y = k3_data$Expression)
+cor( x = k4_data$Score, y = k4_data$Expression)
+cor( x = k5_data$Score, y = k5_data$Expression)
+cor( x = k6_data$Score, y = k6_data$Expression)
+cor( x = k7_data$Score, y = k7_data$Expression)
+cor( x = k8_data$Score, y = k8_data$Expression)
+cor( x = k9_data$Score, y = k9_data$Expression)
+cor( x = k10_data$Score, y = k10_data$Expression)
+cor( x = k11_data$Score, y = k11_data$Expression)
+```
+
+```{r}
+seq(100, 700, by=100)
+```
+
+```{r}
+read.delim(file = "compare_split_k/imeter-400-k5.tsv", header = F, sep = " ")
+```
+
+
+Create "data frame" (list) of all the alignment scores
+```{r}
+#imeters_big <- data.frame(col.names = c("k1_split", "k1_cor", "k2_split", "k2_cor", "k3_split", "k3_cor", "k4_split", "k4_cor", "k5_split", "k5_cor", "k6_split", "k6_cor", "k7_split", "k7_cor"))
+imeters_big <- data.frame()
+```
+
+
+```{r}
+list_imeters <- list()
+list_imeters_names <- c()
+#list_imeters_names <- c("k1_split", "k1_cor", "k2_split", "k2_cor", "k3_split", "k3_cor", "k4_split", "k4_cor", "k5_split", "k5_cor", "k6_split", "k6_cor", "k7_split", "k7_cor")
+
+all_split <- seq(100, 1000, by=100)
+
+for (k in seq(1,11, by=1)) {
+  all_cor <- c()
+  for (split in seq(100, 1000, by=100)) {
+    filename <- paste("compare_split_k/imeter-", split, "-k", k, ".tsv", sep="")
+    temp_table <- read.delim(file = filename, header = F, sep = " ")
+    temp_cor <- cor(temp_table$V1, temp_table$V2)
+    all_cor <- c(all_cor, temp_cor)
+  }
+  list_imeters <- cbind(list_imeters, all_cor, all_split)
+  list_imeters_names <- c(list_imeters_names, paste("k",k,"_cor", sep=""), paste("k",k,"_split", sep=""))
+}  
+
+colnames(list_imeters) <- list_imeters_names
+data_imeters <- as.data.frame(list_imeters)
+```
+
+
+```{r}
+list_imeters <- list()
+list_imeters_names <- c()
+#list_imeters_names <- c("k1_split", "k1_cor", "k2_split", "k2_cor", "k3_split", "k3_cor", "k4_split", "k4_cor", "k5_split", "k5_cor", "k6_split", "k6_cor", "k7_split", "k7_cor")
+
+all_split <- seq(100, 1000, by=100)
+
+for (k in seq(1,11, by=1)) {
+  all_cor <- c()
+  for (split in seq(100, 1000, by=100)) {
+    filename <- paste("compare_split_k/imeter-", split, "-k", k, ".tsv", sep="")
+    temp_table <- read.delim(file = filename, header = F, sep = " ")
+    temp_cor <- cor(temp_table$V1, temp_table$V2)
+    all_cor <- c(all_cor, temp_cor)
+  }
+  list_imeters <- cbind(list_imeters, all_cor, all_split)
+  list_imeters_names <- c(list_imeters_names, paste("k",k,"_cor", sep=""), paste("k",k,"_split", sep=""))
+}  
+
+colnames(list_imeters) <- c("Correlation", "Split", "Kmer")
+data_imeters2 <- as.data.frame(list_imeters)
+```
+
+```{r}
+rep(seq(100, 1000, by=100), 11)
+rep(seq(1,11), each = 10)
+```
+
+```{r}
+all_cor <- c()
+
+for (k in seq(1,11, by=1)) {
+  for (split in seq(100, 1000, by=100)) {
+    filename <- paste("compare_split_k/imeter-", split, "-k", k, ".tsv", sep="")
+    temp_table <- read.delim(file = filename, header = F, sep = " ")
+    temp_cor <- cor(temp_table$V1, temp_table$V2)
+    all_cor <- c(all_cor, temp_cor)
+  }
+}
+
+data_imeters <- data.frame("Correlation" = all_cor, "Split" = rep(seq(100, 1000, by=100), 11), "Kmer" = rep(seq(1,11), each = 10))
+data_imeters$Kmer <- as.factor(data_imeters$Kmer)
+```
+
+
+
+```{r}
+ggplot(data_imeters, aes(x = Split, y = Correlation, color = Kmer)) +
+  geom_line()+
+  geom_point()+
+  labs(
+    x = "Proximal/Distal Intron Split Location (bp)", 
+    y = "Correlation between score and gene expression",
+    title = "Correlation between score and expression by k-mer size and proximal split", 
+    color = "k-mer length"
+  )+
+  theme_light()
+  
+```
+
+```{r}
+ggplot(data_imeters, aes(x = Split, y = Correlation, shape = Kmer)) +
+  geom_line()+
+  geom_point()
+```

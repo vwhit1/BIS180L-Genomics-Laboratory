@@ -1,0 +1,7 @@
+"0","keep <- filterByExpr(d0, mm)"
+"0","sum(keep) # number of genes retained"
+"1","[1]"
+"1"," 11730"
+"1","
+"
+"0","d <- d0[keep,]"

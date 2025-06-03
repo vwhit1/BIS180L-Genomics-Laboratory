@@ -1,0 +1,26 @@
+{
+    "id": "F75BAF0A",
+    "path": "~/R/mRNA_Seq_Workshop/DE_Analysis_mm.Rmd",
+    "project_path": "DE_Analysis_mm.Rmd",
+    "type": "r_markdown",
+    "hash": "3278985912",
+    "contents": "",
+    "dirty": false,
+    "created": 1748387924429.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "538,16",
+        "scrollLine": "535"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1748559593,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1748559593234,
+    "read_only": false,
+    "read_only_alternatives": []
+}

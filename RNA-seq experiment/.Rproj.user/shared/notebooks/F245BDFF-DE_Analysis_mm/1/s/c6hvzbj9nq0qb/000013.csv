@@ -1,0 +1,1 @@
+"0","write.table(top.table, file = ""WT.C_v_WT.NC.txt"", row.names = F, sep = ""\t"", quote = F)"

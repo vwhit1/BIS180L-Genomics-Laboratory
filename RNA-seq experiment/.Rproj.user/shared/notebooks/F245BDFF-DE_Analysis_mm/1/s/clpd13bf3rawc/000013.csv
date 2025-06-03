@@ -1,0 +1,5 @@
+"0","contrast.matrix <- makeContrasts(genotypeKOMIR150, levels=colnames(coef(fit)))
+"
+"2","Error in eval(ej, envir = levelsenv) : 
+  object 'genotypeKOMIR150' not found
+"

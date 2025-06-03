@@ -1,0 +1,12 @@
+BLASTP 2.2.26 [Sep-21-2011]
+
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer, 
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), 
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+
+Query= NP_418375.1 fused aspartate kinase/homoserine dehydrogenase 2
+[Escherichia coli str. K-12 substr. 
+         (812 letters)
+

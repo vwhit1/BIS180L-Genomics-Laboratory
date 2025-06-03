@@ -1,0 +1,6 @@
+"0","identical(anno[match(rownames(top.table), anno$Gene.stable.ID.version), ""Gene.stable.ID.version""], rownames(top.table))"
+"1","[1]"
+"1"," TRUE"
+"1","
+"
+"0","heatmap.2(logcpm[rownames(top.table),],col=brewer.pal(11,""RdBu""),scale=""row"", trace=""none"", labRow = anno[match(rownames(top.table), anno$Gene.stable.ID.version), ""Gene.name""])"

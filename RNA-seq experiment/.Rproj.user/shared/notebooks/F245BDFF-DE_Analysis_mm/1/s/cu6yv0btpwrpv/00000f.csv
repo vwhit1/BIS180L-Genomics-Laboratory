@@ -1,0 +1,3 @@
+"0","sample_names <- colnames(counts)"
+"0","metadata <- as.data.frame(strsplit2(sample_names, c(""_""))[,2:4], row.names = sample_names)"
+"0","colnames(metadata) <- c(""mouse"", ""genotype"", ""cell_type"")"

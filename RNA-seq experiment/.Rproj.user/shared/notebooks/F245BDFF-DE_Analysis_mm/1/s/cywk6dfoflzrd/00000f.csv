@@ -1,0 +1,5 @@
+"0","contr <- makeContrasts(groupWT.C - groupKOMIR150.C, levels = colnames(coef(fit)))"
+"0","tmp <- contrasts.fit(fit, contr)"
+"0","tmp <- eBayes(tmp)"
+"0","top.table <- topTable(tmp, sort.by = ""P"", n = Inf)"
+"0","head(top.table, 20)"

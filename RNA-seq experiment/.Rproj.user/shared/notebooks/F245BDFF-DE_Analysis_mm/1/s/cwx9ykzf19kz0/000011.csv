@@ -1,0 +1,2 @@
+"0","pdf(file=""mdsplot.pdf"")"
+"0","plotMDS(d, col = as.numeric(metadata$group), cex=1)"

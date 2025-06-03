@@ -1,0 +1,72 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+?geom_line
+```
+
+
+
+```{r}
+files <- list.files(path="results", pattern="*.txt", full.names=TRUE, recursive=FALSE)
+lapply(files, function(x) {
+    align <- read.table(file = x)
+    # apply function
+    hist(align[,1], main = paste("Alignment score distribution of", x), col="wheat2", xlab="Alignment score")
+   })
+```
+
+## Trying to make them overlap
+
+Create "data frame" (list) of all the alignment scores
+```{r}
+list_aligns <- list()
+list_aligns_names <- c() 
+for (i in seq(25, 400, by=25)) {
+  filename <- paste("results/", i, ".txt", sep="")
+  #print(filename)
+  table_a <- read.table(file = filename)
+  vector_a <- unlist(table_a)
+  vector_a <- unname(vector_a)
+  list_aligns <- cbind(list_aligns, vector_a)
+  list_aligns_names <- append(list_aligns_names, paste(i, " a.a.", sep=""))
+}
+
+colnames(list_aligns) <- list_aligns_names
+#data_aligns <- as.data.frame(list_aligns)
+```
+
+Plot them with overlap
+
+```{r}
+library(RColorBrewer)
+```
+
+
+```{r}
+#list_align_hists <- list()
+
+#mycolors <- rainbow(ncol(list_aligns))
+
+mycolors <- colorRampPalette(brewer.pal(9,"RdYlGn"))(ncol(list_aligns))
+
+for (i in seq(1,(ncol(list_aligns)))) {
+  x <- hist(as.numeric(list_aligns[,i]), plot = F)
+  if (i == 1) {
+    plot(x$mids, x$density, xlim=c(0,80), ylim=c(0,0.15), xlab="Score Distribution", ylab = "Density", type="l", main = "Distributions of alignments of randomly generated sequences")
+  }
+  lines(x$mids, x$density, col = mycolors[i])
+  legend(x = 60, y = 0.15, legend = list_aligns_names, fill=mycolors, cex = 0.60, title="Seq length", title.cex = 0.7)
+} 
+```
+
+
+
+
+

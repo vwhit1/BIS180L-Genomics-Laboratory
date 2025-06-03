@@ -1,0 +1,3 @@
+"0",""
+"0","head(anno[match(rownames(fit2), anno$Gene.stable.ID.version),"
+"0","     c(""Gene.stable.ID.version"", ""Gene.name"") ])"

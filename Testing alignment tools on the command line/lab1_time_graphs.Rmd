@@ -1,0 +1,18 @@
+```{r}
+library(tidyverse)
+time_data <- read.csv(file="time_data_2.csv", header = F)
+```
+
+```{r}
+names = c("B_or_W", "seqlen", "database_size", "rand_or_nat", "pepstats_filename", "real_time", "user_time", "sys_time")
+colnames(time_data) = names
+```
+
+```{r}
+time_data %>% 
+  pivot_longer(cols = c(real_time, user_time, sys_time), names_to = "time_id", values_to = "rus_time") %>% 
+  mutate("time_id_bw" = paste(B_or_W, time_id, sep = "_")) %>% 
+  ggplot(aes(rus_time, seqlen, color=B_or_W, shape = time_id))+
+  geom_point()
+```
+

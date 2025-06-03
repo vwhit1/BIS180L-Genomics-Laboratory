@@ -1,0 +1,4 @@
+"0","pdf(""heatmap.pdf"")"
+"0",""
+"0","#using a red and blue color scheme without traces and scaling each row"
+"0","heatmap.2(logcpm[rownames(top.table),],col=brewer.pal(11,""RdBu""),scale=""row"", trace=""none"")"

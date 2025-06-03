@@ -1,0 +1,7 @@
+"0","identical(anno[match(rownames(fit2), anno$Gene.stable.ID.version),"
+"0","     c(""Gene.stable.ID.version"")], rownames(fit2))"
+"1","[1]"
+"1"," TRUE"
+"1","
+"
+"0","volcanoplot(fit2, coef=1, highlight=8, names=anno[match(rownames(fit2), anno$Gene.stable.ID.version), ""Gene.name""], main=""NOT Genotype KOMIR150 vs. WT for cell type C"", cex.main = 0.8)"

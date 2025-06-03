@@ -1,0 +1,10 @@
+"0","rna.pp.terms <- genesInTerm(GOdata)[[""GO:0010556""]] # get genes associated with term"
+"0","p.values.in <- geneList[names(geneList) %in% rna.pp.terms]"
+"0","p.values.out <- geneList[!(names(geneList) %in% rna.pp.terms)]"
+"0","plot.ecdf(p.values.in, verticals = T, do.points = F, col = ""red"", lwd = 2, xlim = c(0,1),"
+"0","          main = ""Empirical Distribution of DE P-Values by Annotation with 'regulation of macromolecule biosynthetic process'"","
+"0","          cex.main = 0.9, xlab = ""p"", ylab = ""Probability(P-Value <= p)"")"
+"2","Warning: type = ""cairo"" is unavailable. trying ""Xlib"""
+"2","Error in dev.control(displaylist = ""enable"") : 
+  dev.control() called without an open graphics device
+"

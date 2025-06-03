@@ -1,0 +1,2 @@
+"0","counts <- read.delim(""rnaseq_workshop_counts.txt"", row.names = 1)"
+"0","head(counts)"

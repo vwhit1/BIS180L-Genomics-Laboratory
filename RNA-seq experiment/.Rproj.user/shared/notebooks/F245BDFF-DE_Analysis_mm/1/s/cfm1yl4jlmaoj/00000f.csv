@@ -1,0 +1,5 @@
+"0","hist(rnorm(n = 10000), main = ""Normally Distributed Data"", breaks=50)"
+"2","Warning: type = ""cairo"" is unavailable. trying ""Xlib"""
+"2","Error in dev.control(displaylist = ""enable"") : 
+  dev.control() called without an open graphics device
+"

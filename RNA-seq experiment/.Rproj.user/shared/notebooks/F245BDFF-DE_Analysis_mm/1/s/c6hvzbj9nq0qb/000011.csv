@@ -1,0 +1,5 @@
+"0","top.table$Gene <- rownames(top.table)"
+"0","top.table <- top.table[,c(""Gene"", names(top.table)[1:6])]"
+"0","top.table <- data.frame(top.table,anno[match(top.table$Gene,anno$Gene.stable.ID.version),],logcpm[match(top.table$Gene,rownames(logcpm)),])"
+"0",""
+"0","head(top.table)"

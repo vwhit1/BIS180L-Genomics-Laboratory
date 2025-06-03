@@ -1,0 +1,2 @@
+"0","logcpm <- cpm(d, prior.count=2, log=TRUE)"
+"0","write.table(logcpm,""rnaseq_workshop_normalized_counts.txt"",sep=""\t"",quote=F)"

@@ -1,0 +1,6 @@
+"0","total_zero <- (rowSums(counts)[rowSums(counts) == 0])"
+"0","length(total_zero)"
+"1","[1]"
+"1"," 50870"
+"1","
+"

@@ -1,0 +1,3 @@
+"0","pdf(""volcano_plot.pdf"")"
+"0",""
+"0","volcanoplot(fit2, coef=1, highlight=8, names=rownames(fit2), main=""NOT Genotype KOMIR150 vs. WT for cell type C"", cex.main = 0.8)"
